@@ -63,14 +63,16 @@ playButton.addEventListener('click', () => {
         toGuessNumbers.innerText = numbers;
 
         // Creo un contatore che parte da 30 e diminuisce di 1 ogni secondo
-        let countdownSeconds = 30
+        let countdownSeconds = 5
         const countdown = setInterval(() => {
             countdownPlaceholder.innerText = --countdownSeconds;
             
+            // SE il contatore arriva a zero 
             if (countdownSeconds === 0) {
                 clearInterval(countdown);
                 setTimeout(()=>{
                     countdownPlaceholder.classList.add('d-none')
+                    toGuessNumbers.classList.add('d-none')
                   }, 1000);
             } 
         }, 1000);
