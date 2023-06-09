@@ -94,10 +94,11 @@ playButton.addEventListener('click', () => {
                   }, 1000);
             } 
         }, 1000);
-        
-        
-    
-    
+})
 
+
+scoreButton.addEventListener('clicl', () => {
+    const guessNumber = parseInt(guessInput.value);
+    
 })
 
