@@ -22,7 +22,7 @@ Facciamo inserire i numeri all'utente tramite 5 campi di input invece che via pr
 - Creo una tendina con la scelta della difficoltà (la quantità di numeri varia in base alla difficoltà selezionata)
 - Recupero gli elementi dal DOM
 - Creo un funzione che mi genera numeri casuali da un minimo ad un massimo prestabiliti 
-**AL CLICK** di un bottone 
+**AL CLICK** di un bottone inizia il gioco
 - Recuperola difficoltà selezionata
 - Genero tramite la funzione i numeri 
 - Creo un contatore che parte da 30 e diminuisce di 1 ogni secondo
