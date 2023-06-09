@@ -4,6 +4,7 @@ console.log('JS OK')
 
 // Recupero gli elementi dal DOM
 const countdownPlaceholder = document.getElementById('countdown');
+const gameDisplay = document.getElementById('game-display')
 const gameModeInput = document.getElementById('game-mode');
 const playButton = document.getElementById('play-btn')
 const toGuessNumbers = document.getElementById('to-guess-number');
@@ -25,6 +26,15 @@ const createInput = (inputNumber) => {
     return input;
 }
 
+// Creo una funzione che rimuove la classe 'd-none'
+const removeDNone = (domElement) => {
+    domElement.classList.remove('d-none')
+}
+
+// Creo una funzione che aggiunge la classe 'd-none'
+const addDNone = (domElement) => {
+    domElement.classList.add('d-none')
+}
 
 
 // LOGICA DI GIOCO
@@ -71,8 +81,12 @@ playButton.addEventListener('click', () => {
             if (countdownSeconds === 0) {
                 clearInterval(countdown);
                 setTimeout(()=>{
-                    countdownPlaceholder.classList.add('d-none')
-                    toGuessNumbers.classList.add('d-none')
+                    addDNone(countdownPlaceholder)
+                    addDNone(toGuessNumbers)
+                    addDNone(gameDisplay)
+                    removeDNone(guessNumbers)
+                    removeDNone(guessInput)
+                    removeDNone(guescoreButtossNumbers)
                   }, 1000);
             } 
         }, 1000);

@@ -32,6 +32,7 @@ Facciamo inserire i numeri all'utente tramite 5 campi di input invece che via pr
   - Faccio apparire 5 input con un bottone
 **AL CLICK** del bottone
 - Recupero i value degli input
+- Controllo che siano numeri 
 - Controllo che siano nell'array delle risposte giuste
     **SE** tutte le risposte sono giuste 
         - Stampo in pagina un messaggio di vittoria 
