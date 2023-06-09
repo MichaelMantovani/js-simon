@@ -43,6 +43,9 @@ const addDNone = (domElement) => {
 playButton.addEventListener('click', () => {
     
     toGuessNumbers.innerText = '';
+    addDNone(gameDisplay)
+    
+
     // Recuperola difficoltà selezionata
     const gameMode = gameModeInput.value
     let numbersTot = 5 
@@ -73,9 +76,9 @@ playButton.addEventListener('click', () => {
         toGuessNumbers.innerText = numbers;
 
         // Creo un contatore che parte da 30 e diminuisce di 1 ogni secondo
-        let countdownSeconds = 5
+        let countdownSeconds = 30
         const countdown = setInterval(() => {
-            countdownPlaceholder.innerText = --countdownSeconds;
+            countdownPlaceholder.innerText = 'Memorizza i numeri in'+ ' ' + --countdownSeconds;
             
             // SE il contatore arriva a zero 
             if (countdownSeconds === 0) {
@@ -87,6 +90,7 @@ playButton.addEventListener('click', () => {
                     removeDNone(guessNumbers)
                     removeDNone(guessInput)
                     removeDNone(guescoreButtossNumbers)
+                    countdownPlaceholder.innerText = 'TEMPO SCADUTO'
                   }, 1000);
             } 
         }, 1000);
