@@ -36,6 +36,6 @@ Facciamo inserire i numeri all'utente tramite 5 campi di input invece che via pr
     **SE** tutte le risposte sono giuste 
         - Stampo in pagina un messaggio di vittoria 
     **ALTRIMENTI** 
-        - Stampo in pagina un messaggio con il numero della risposte giuste.   
+        - Stampo in pagina un messaggio con il numero della risposte giuste.       
 
  
