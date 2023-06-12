@@ -32,7 +32,7 @@ const addDNone = (domElement) => {
 const min = 1;
 const max = 50;
 const numbersTot = 5;
-let countdownSeconds = 5;
+let countdownSeconds = 5 ;
 
 
 // LOGICA DI GIOCO
@@ -79,7 +79,7 @@ playButton.addEventListener('click', () => {
                     addDNone(countdownPlaceholder)
                     addDNone(toGuessNumbers)
                     removeDNone(userGuessForm)
-                  }, 1000);
+                  }, 200);
             } 
         }, 1000); 
 })
@@ -102,15 +102,17 @@ userGuessForm.addEventListener('submit', (event) => {
    
 
 //    Controllo quante risposte giuste ci sono
-   const correctUserNumbers = []
+   const correctUserAnswers = []
    for (let i = 0; i < userGuess.length; i++) {
-    if (numbers.includes(userGuess[i])) correctUserNumbers.push(userGuess[i])
+    if (numbers.includes(userGuess[i])) correctUserAnswers.push(userGuess[i])
    }
    
 
-   
+//    In base alle risposte giuste scrivo un messaggio 
+    let resultMessagge = `Hai indovinato ${correctUserAnswers.length} numero`
+    if(correctUserAnswers.length > 1 ) resultMessagge = `Hai indovinato ${correctUserAnswers.length} numeri`
 
-
+    resultPlaceholder.innerText = resultMessagge
 })
 
 
