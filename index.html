@@ -10,34 +10,20 @@
 </head>
 <body>
     <h1 id="countdown" class="text-center my-4 d-none"></h1>
-    <div id="game" class="text-center">
-        <div id="game-display">
-            <label for="game-mode" class="d-block my-1 fs-3">Scegli la difficoltà</label>
-            <select  id="game-mode" class="my-2">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-                <option value="ultra-nightmare">Ultra Nightmare</option>
-            </select>
-            <button id="play-btn" class="mx-3 btn btn-primary">Play</button>
-        </div>
-        
-        <div id="to-guess-number" class="my-3 d-none"></div>
-        <div id="guess-number" class="container-fluid mt-4 d-none">
-            <div id="guess-input" class="row row-cols-3 justify-content-center text-center gap-2" >
-                <input type="number" placeholder="Inserisci il 1° numero">
-                <input type="number">
-                <input type="number">
-                <input type="number">
-                <input type="number">
-            </div>
-            <button id="btn-score" class="btn btn-primary my-3">Verifica il tuo punteggio</button>
-            <div id="result" class="my-2 fs-1 fw-bold"></div>
-        </div> 
-
+    <div id="game" class="text-center mt-4">
+        <button id="play-btn" class="mx-3 btn btn-primary">Play</button>
     </div>
-
-
+    <ul id="to-guess-number" class="my-3 d-none d-flex list-unstyled justify-content-center gap-3">
+    </ul>
+    <form id="user-guess-number" class=" text-center mt-4 d-none">
+        <input type="number" min="1" max="50" step="1" placeholder="Inserisci qui un numero">
+        <input type="number" min="1" max="50" step="1" placeholder="Inserisci qui un numero">
+        <input type="number" min="1" max="50" step="1" placeholder="Inserisci qui un numero">
+        <input type="number" min="1" max="50" step="1" placeholder="Inserisci qui un numero">
+        <input type="number" min="1" max="50" step="1" placeholder="Inserisci qui un numero">
+        <button id="btn-score" class="btn btn-primary my-3 d-block mx-auto">Verifica il tuo punteggio</button>
+    </form>
+    <div id="result" class="my-2 fs-1 fw-bold"></div>
     
 
     
