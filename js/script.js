@@ -38,14 +38,14 @@ let countdownSeconds = 5;
 // LOGICA DI GIOCO
 
 // AL CLICK di un bottone inizia il gioco
-
+const numbers = [];
 playButton.addEventListener('click', () => {
     toGuessNumbers.innerText = '';
     addDNone(playButton)
     toGuessNumbers.classList.remove('d-none')
     countdownPlaceholder.classList.remove('d-none')
     // Genero tramite la funzione i numeri 
-    let numbers = [];
+    
     let createdNumber;
     while (numbers.length < numbersTot) {
         do {
@@ -94,8 +94,23 @@ userGuessForm.addEventListener('submit', (event) => {
     // Validazione dei numeri scritti dall'utente
     if (!userGuess.includes(userNumber) && userNumber >= min && userNumber <= max && !isNaN(userNumber)) userGuess.push(userNumber);
    }
-   console.log(userGuess)
-})
+   
+   if (userGuess.length  !== numbers.length) {
+    alert('Alcuni dati inseriti non sono validi');
+    return;
+   }
+   
 
+//    Controllo quante risposte giuste ci sono
+   const correctUserNumbers = []
+   for (let i = 0; i < userGuess.length; i++) {
+    if (numbers.includes(userGuess[i])) correctUserNumbers.push(userGuess[i])
+   }
+   
+
+   
+
+
+})
 
 
