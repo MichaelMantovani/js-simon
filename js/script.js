@@ -109,8 +109,8 @@ userGuessForm.addEventListener('submit', (event) => {
    
 
 //    In base alle risposte giuste scrivo un messaggio 
-    let resultMessagge = `Hai indovinato ${correctUserAnswers.length} numero`
-    if(correctUserAnswers.length > 1 ) resultMessagge = `Hai indovinato ${correctUserAnswers.length} numeri`
+    let resultMessagge = `Hai indovinato ${correctUserAnswers.length} numero. Il numero che hai indovinato è ${correctUserAnswers}.`
+    if(correctUserAnswers.length > 1 ) resultMessagge = `Hai indovinato ${correctUserAnswers.length} numeri. I numeri che hai indovinato sono ${correctUserAnswers}` 
 
     resultPlaceholder.innerText = resultMessagge
 })
