@@ -32,7 +32,7 @@ const addDNone = (domElement) => {
 const min = 1;
 const max = 50;
 const numbersTot = 5;
-let countdownSeconds = 5 ;
+let countdownSeconds = 30 ;
 
 
 // LOGICA DI GIOCO
