@@ -48,13 +48,13 @@ playButton.addEventListener('click', () => {
     
     let createdNumber;
     while (numbers.length < numbersTot) {
-        do {
-            createdNumber = getRandomNumber(min,max);
-        }
-        while (numbers.includes(createdNumber)) {
+        
+        createdNumber = getRandomNumber(min,max);
+        
+        if( !numbers.includes(createdNumber) ) {
             numbers.push(createdNumber);
         }
-    }
+      }
 
     // Stampo i numeri in pagina
     let guessNumbers = ''
